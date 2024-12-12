@@ -86,6 +86,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DSDept.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DSImage.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSImage.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EmpDetails.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -109,6 +114,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Imgrptfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imgrptfrm.Designer.cs">
+      <DependentUpon>Imgrptfrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDIParent1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +133,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptEmpDetails.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptImage.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptImage.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="rptVwDept.cs">
@@ -139,6 +156,9 @@
     <EmbeddedResource Include="EmployeeFRM.resx">
       <DependentUpon>EmployeeFRM.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Imgrptfrm.resx">
+      <DependentUpon>Imgrptfrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDIParent1.resx">
       <DependentUpon>MDIParent1.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,6 +174,10 @@
     <EmbeddedResource Include="rptEmpDetails.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptEmpDetails.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptImage.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptImage.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="rptVwDept.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -180,6 +204,17 @@
     </None>
     <None Include="DSDept.xss">
       <DependentUpon>DSDept.xsd</DependentUpon>
+    </None>
+    <None Include="DSImage.xsc">
+      <DependentUpon>DSImage.xsd</DependentUpon>
+    </None>
+    <None Include="DSImage.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSImage.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSImage.xss">
+      <DependentUpon>DSImage.xsd</DependentUpon>
     </None>
     <None Include="EmpDetails.xsc">
       <DependentUpon>EmpDetails.xsd</DependentUpon>

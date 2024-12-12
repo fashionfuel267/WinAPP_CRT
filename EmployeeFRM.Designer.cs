@@ -35,6 +35,8 @@
             this.dtpJD = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmbDept = new System.Windows.Forms.ComboBox();
+            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dbHRDataSet = new WindowsFormsApp1.DbHRDataSet();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.txtSalary = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,14 +45,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnImageload = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.dbHRDataSet = new WindowsFormsApp1.DbHRDataSet();
-            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.departmentTableAdapter = new WindowsFormsApp1.DbHRDataSetTableAdapters.DepartmentTableAdapter();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.btnDel = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.txtImagePath = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbHRDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbHRDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -76,6 +80,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(486, 152);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
             // dtpJD
             // 
@@ -102,6 +107,16 @@
             this.cmbDept.Size = new System.Drawing.Size(121, 21);
             this.cmbDept.TabIndex = 2;
             this.cmbDept.ValueMember = "Id";
+            // 
+            // departmentBindingSource
+            // 
+            this.departmentBindingSource.DataMember = "Department";
+            this.departmentBindingSource.DataSource = this.dbHRDataSet;
+            // 
+            // dbHRDataSet
+            // 
+            this.dbHRDataSet.DataSetName = "DbHRDataSet";
+            this.dbHRDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // openFileDialog1
             // 
@@ -162,23 +177,13 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(380, 168);
+            this.btnSave.Location = new System.Drawing.Point(416, 190);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // dbHRDataSet
-            // 
-            this.dbHRDataSet.DataSetName = "DbHRDataSet";
-            this.dbHRDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // departmentBindingSource
-            // 
-            this.departmentBindingSource.DataMember = "Department";
-            this.departmentBindingSource.DataSource = this.dbHRDataSet;
             // 
             // departmentTableAdapter
             // 
@@ -196,11 +201,54 @@
             this.checkBox1.Text = "IsActive";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(271, 18);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.TabIndex = 12;
+            this.txtId.Text = "0";
+            this.txtId.Visible = false;
+            // 
+            // btnDel
+            // 
+            this.btnDel.Enabled = false;
+            this.btnDel.Location = new System.Drawing.Point(516, 190);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(75, 23);
+            this.btnDel.TabIndex = 13;
+            this.btnDel.Text = "Delete";
+            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Enabled = false;
+            this.btnClear.Location = new System.Drawing.Point(655, 190);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.TabIndex = 14;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // txtImagePath
+            // 
+            this.txtImagePath.Location = new System.Drawing.Point(271, 62);
+            this.txtImagePath.Name = "txtImagePath";
+            this.txtImagePath.Size = new System.Drawing.Size(100, 20);
+            this.txtImagePath.TabIndex = 15;
+            this.txtImagePath.Visible = false;
+            // 
             // EmployeeFRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtImagePath);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnDel);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnImageload);
@@ -222,8 +270,8 @@
             this.Load += new System.EventHandler(this.EmployeeFRM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbHRDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbHRDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,5 +297,9 @@
         private System.Windows.Forms.BindingSource departmentBindingSource;
         private DbHRDataSetTableAdapters.DepartmentTableAdapter departmentTableAdapter;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Button btnDel;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.TextBox txtImagePath;
     }
 }

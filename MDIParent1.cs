@@ -124,5 +124,12 @@ namespace WindowsFormsApp1
             deptSummeryRpt.Show();
             deptSummeryRpt.MdiParent = this;
         }
+
+        private void imageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Imgrptfrm deptSummeryRpt = new Imgrptfrm();
+            deptSummeryRpt.Show();
+            deptSummeryRpt.MdiParent = this;
+        }
     }
 }

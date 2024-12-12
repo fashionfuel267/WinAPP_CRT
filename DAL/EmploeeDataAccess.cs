@@ -65,15 +65,84 @@ namespace WindowsFormsApp1.DAL
             }
             return 0;
         }
-  
-    public DataTable LoadData()
+        public int Update(Employee employee, OpenFileDialog openFileDialog)
+        {
+            try
+            {
+                //  string constring = ConfigurationManager.ConnectionStrings["WindowsFormsApp1.Properties.Settings.DbHRConnectionString"].ConnectionString;
+
+                string conpath = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\App_Data\DbHR.mdf";
+                string constring = $@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename ={conpath}; Integrated Security = True";
+
+                string sql = "";
+                string fileName = openFileDialog.FileName;
+                if (!string.IsNullOrEmpty(fileName) && File.Exists(fileName))
+                {
+                //}
+                //    if (openFileDialog.CheckFileExists)
+                //{
+                    string filename = System.IO.Path.GetFileName(openFileDialog.FileName);
+                    string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\Images\" + filename;
+                   
+                    if(File.Exists(path))
+                    {
+                        File.Delete(path);
+                    }
+                    System.IO.File.Copy(openFileDialog.FileName, path);
+                    employee.ImagePath = @"\Images\" + filename;
+                }
+                employee.ImagePath = employee.ImagePath;
+                    sql = $"update Employee set EmployeeName='{employee.Name}',JoinindDate='{employee.JoiningDate}',Salary={employee.Salary}," +
+                    $"ImagePAth='{employee.ImagePath}',IsActive='{employee.IsActive}',DeptId={employee.DeptId} where Id={employee.Id}";
+                sqlConnection = new SqlConnection(constring);
+                sqlCommand = new SqlCommand(sql, sqlConnection);
+                sqlConnection.Open();
+                int result = sqlCommand.ExecuteNonQuery();
+                if (result > 0)
+                {
+                   
+                    return result;
+                }
+                sqlConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+            return 0;
+        }
+        public int Delete(int Id)
+        {
+            try
+            {
+                //                string constring = ConfigurationManager.ConnectionStrings["WindowsFormsApp1.Properties.Settings.DbHRConnectionString"].ConnectionString;
+
+                string conpath = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\App_Data\DbHR.mdf";
+                string constring = $@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename ={conpath}; Integrated Security = True";
+                string sql = "";
+                sql = $"delete  from Employee where Id={Id} ";
+
+                sqlConnection = new SqlConnection(constring);
+                sqlCommand = new SqlCommand(sql, sqlConnection);
+                sqlConnection.Open();
+                int result = sqlCommand.ExecuteNonQuery();
+                if (result > 0)
+                {
+                    return result;
+                }
+                sqlConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+            return 0;
+        }
+        public DataTable LoadData()
         {
             SqlDataAdapter sda = new SqlDataAdapter();
-
-
             string conpath = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\App_Data\DbHR.mdf";
             string connectionString = $@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename ={conpath}; Integrated Security = True";
-
             string sql = $"select * from Employee ";
             sqlConnection = new SqlConnection(connectionString);
             adapter = new SqlDataAdapter(sql, sqlConnection);
@@ -91,11 +160,44 @@ namespace WindowsFormsApp1.DAL
 
             foreach (DataRow row in dt.Rows)
             {
-                imgPath = path + row["Imagepath"].ToString();
-                row["Data"] = File.ReadAllBytes(imgPath);
+                if (!string.IsNullOrEmpty(row["Imagepath"].ToString()))
+                {
+                    imgPath = path + row["Imagepath"].ToString();
+                    row["Data"] = File.ReadAllBytes(imgPath);
+                }
             }
             return dt;
         }
+        public Employee GetById(int Id)
+        {
+            Employee emp = new Employee();
+            SqlDataAdapter sda = new SqlDataAdapter();
+            string conpath = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\App_Data\DbHR.mdf";
+            string connectionString = $@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename ={conpath}; Integrated Security = True";
 
+            string sql = $"select * from Employee where Id={Id}";
+            sqlConnection = new SqlConnection(connectionString);
+            sqlConnection.Open();
+            sqlCommand = new SqlCommand(sql, sqlConnection);
+            reader= sqlCommand.ExecuteReader();
+            if (reader.HasRows)
+            {
+               
+                while (reader.Read())
+                {
+                    emp.Id =int.Parse( reader["Id"].ToString());
+                    emp.Name = reader["EmployeeName"].ToString();
+                    emp.Salary =double.Parse( reader["Salary"].ToString());
+                    emp.IsActive =bool.Parse( reader["Isactive"].ToString());
+                    emp.ImagePath = reader["ImagePath"].ToString();
+                    emp.JoiningDate =DateTime.Parse( reader["JoinindDate"].ToString());
+                    emp.DeptId = int.Parse(reader["DeptId"].ToString());
+                }
+            }
+            //Convert all Images to Byte[] and copy to DataTable.
+           sqlConnection.Close();
+            return emp;
+          
+        }
     }
 }
