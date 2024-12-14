@@ -13,14 +13,21 @@ using CrystalDecisions.CrystalReports.Engine;
 
 namespace WindowsFormsApp1
 {
-    public partial class Imgrptfrm : Form
+    public partial class RptImgfrm : Form
     {
-        public Imgrptfrm()
+        public RptImgfrm()
         {
             InitializeComponent();
         }
+
+        private void RptImgfrm_Load(object sender, EventArgs e)
+        {LoadReport();
+
+        }
         private void LoadReport()
         {
+            // Define the connection string and SQL query
+
             string conpath = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\App_Data\DbHR.mdf";
             string connectionString = $@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename ={conpath}; Integrated Security = True";
 
@@ -33,16 +40,13 @@ namespace WindowsFormsApp1
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sql, connection);
                 sqlDataAdapter.Fill(dataSet);
 
-                foreach (DataRow row in dataSet.Tables[0].Rows) { row["ImagePath"] = rootd + "\\" + row["ImagePath"].ToString(); }
-                // Debug: Check the number of rows
-                // MessageBox.Show(dataSet.Tables[0].Rows.Count.ToString());
+                foreach (DataRow row in dataSet.Tables[0].Rows)
+                { 
+                    row["ImagePath"] = rootd + "\\" + row["ImagePath"].ToString(); 
+                }
+                
             }
-
-            // Define paths to main report and subreport
-           
-            string reportPath = Path.Combine(rootd, "rptImage.rpt");
-
-
+            string reportPath = Path.Combine(rootd, "rptEmpImage.rpt");
             // Load the main report
             ReportDocument reportDocument = new ReportDocument();
             reportDocument.Load(reportPath);
@@ -58,9 +62,6 @@ namespace WindowsFormsApp1
                 MessageBox.Show("No records to display.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-        private void Imgrptfrm_Load(object sender, EventArgs e)
-        {
-            LoadReport();
-        }
+        
     }
 }

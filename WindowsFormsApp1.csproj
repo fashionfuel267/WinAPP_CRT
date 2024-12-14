@@ -81,6 +81,11 @@
     <Compile Include="DeptSummeryRpt.Designer.cs">
       <DependentUpon>DeptSummeryRpt.cs</DependentUpon>
     </Compile>
+    <Compile Include="DeptWithEmp.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeptWithEmp.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DSDept.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -101,6 +106,11 @@
     </Compile>
     <Compile Include="EmpDetailsrpt.Designer.cs">
       <DependentUpon>EmpDetailsrpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpImage.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmpImage.xsd</DependentUpon>
     </Compile>
     <Compile Include="EmployeeFRM.cs">
       <SubType>Form</SubType>
@@ -129,10 +139,22 @@
     <Compile Include="Model\Employee.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rptDeptsub.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDeptsub.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="rptEmpDetails.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptEmpDetails.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptEmpImage.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptEmpImage.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="rptImage.cs">
@@ -141,11 +163,23 @@
       <DependentUpon>rptImage.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="RptImgfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptImgfrm.Designer.cs">
+      <DependentUpon>RptImgfrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="rptVwDept.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptVwDept.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubRptFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubRptFRM.Designer.cs">
+      <DependentUpon>SubRptFRM.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="DeptSummeryRpt.resx">
       <DependentUpon>DeptSummeryRpt.cs</DependentUpon>
@@ -171,17 +205,31 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="rptDeptsub.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDeptsub.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="rptEmpDetails.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptEmpDetails.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptEmpImage.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptEmpImage.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="rptImage.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptImage.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="RptImgfrm.resx">
+      <DependentUpon>RptImgfrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="rptVwDept.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptVwDept.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubRptFRM.resx">
+      <DependentUpon>SubRptFRM.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DbHRDataSet.xsc">
       <DependentUpon>DbHRDataSet.xsd</DependentUpon>
@@ -193,6 +241,17 @@
     </None>
     <None Include="DbHRDataSet.xss">
       <DependentUpon>DbHRDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DeptWithEmp.xsc">
+      <DependentUpon>DeptWithEmp.xsd</DependentUpon>
+    </None>
+    <None Include="DeptWithEmp.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DeptWithEmp.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DeptWithEmp.xss">
+      <DependentUpon>DeptWithEmp.xsd</DependentUpon>
     </None>
     <None Include="DSDept.xsc">
       <DependentUpon>DSDept.xsd</DependentUpon>
@@ -226,6 +285,17 @@
     </None>
     <None Include="EmpDetails.xss">
       <DependentUpon>EmpDetails.xsd</DependentUpon>
+    </None>
+    <None Include="EmpImage.xsc">
+      <DependentUpon>EmpImage.xsd</DependentUpon>
+    </None>
+    <None Include="EmpImage.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EmpImage.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="EmpImage.xss">
+      <DependentUpon>EmpImage.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -263,6 +333,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />

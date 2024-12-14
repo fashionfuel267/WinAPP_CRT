@@ -131,5 +131,22 @@ namespace WindowsFormsApp1
             deptSummeryRpt.Show();
             deptSummeryRpt.MdiParent = this;
         }
+
+        private void empImageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Imgrptfrm empImage=new Imgrptfrm();
+            empImage.Show();
+            empImage.MdiParent = this;
+
+        }
+
+        private void subReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            SubRptFRM empImage = new SubRptFRM();
+            empImage.Show();
+            empImage.MdiParent = this;
+
+        }
     }
 }

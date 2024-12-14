@@ -20,17 +20,17 @@ namespace WindowsFormsApp1 {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("EmpDetails")]
+    [global::System.Xml.Serialization.XmlRootAttribute("EmpImage")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class EmpDetails : global::System.Data.DataSet {
+    public partial class EmpImage : global::System.Data.DataSet {
         
-        private DTDetailsDataTable tableDTDetails;
+        private ImgeDTDataTable tableImgeDT;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public EmpDetails() {
+        public EmpImage() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace WindowsFormsApp1 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected EmpDetails(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected EmpImage(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace WindowsFormsApp1 {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["DTDetails"] != null)) {
-                    base.Tables.Add(new DTDetailsDataTable(ds.Tables["DTDetails"]));
+                if ((ds.Tables["ImgeDT"] != null)) {
+                    base.Tables.Add(new ImgeDTDataTable(ds.Tables["ImgeDT"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace WindowsFormsApp1 {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public DTDetailsDataTable DTDetails {
+        public ImgeDTDataTable ImgeDT {
             get {
-                return this.tableDTDetails;
+                return this.tableImgeDT;
             }
         }
         
@@ -127,7 +127,7 @@ namespace WindowsFormsApp1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            EmpDetails cln = ((EmpDetails)(base.Clone()));
+            EmpImage cln = ((EmpImage)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace WindowsFormsApp1 {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["DTDetails"] != null)) {
-                    base.Tables.Add(new DTDetailsDataTable(ds.Tables["DTDetails"]));
+                if ((ds.Tables["ImgeDT"] != null)) {
+                    base.Tables.Add(new ImgeDTDataTable(ds.Tables["ImgeDT"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace WindowsFormsApp1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableDTDetails = ((DTDetailsDataTable)(base.Tables["DTDetails"]));
+            this.tableImgeDT = ((ImgeDTDataTable)(base.Tables["ImgeDT"]));
             if ((initTable == true)) {
-                if ((this.tableDTDetails != null)) {
-                    this.tableDTDetails.InitVars();
+                if ((this.tableImgeDT != null)) {
+                    this.tableImgeDT.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace WindowsFormsApp1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "EmpDetails";
+            this.DataSetName = "EmpImage";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/EmpDetails.xsd";
+            this.Namespace = "http://tempuri.org/EmpImage.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableDTDetails = new DTDetailsDataTable();
-            base.Tables.Add(this.tableDTDetails);
+            this.tableImgeDT = new ImgeDTDataTable();
+            base.Tables.Add(this.tableImgeDT);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeDTDetails() {
+        private bool ShouldSerializeImgeDT() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace WindowsFormsApp1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            EmpDetails ds = new EmpDetails();
+            EmpImage ds = new EmpImage();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,31 +270,23 @@ namespace WindowsFormsApp1 {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void DTDetailsRowChangeEventHandler(object sender, DTDetailsRowChangeEvent e);
+        public delegate void ImgeDTRowChangeEventHandler(object sender, ImgeDTRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class DTDetailsDataTable : global::System.Data.TypedTableBase<DTDetailsRow> {
-            
-            private global::System.Data.DataColumn columnName;
+        public partial class ImgeDTDataTable : global::System.Data.TypedTableBase<ImgeDTRow> {
             
             private global::System.Data.DataColumn columnEmployeeName;
-            
-            private global::System.Data.DataColumn columnSalary;
-            
-            private global::System.Data.DataColumn columnJoinindDate;
-            
-            private global::System.Data.DataColumn columnIsActive;
             
             private global::System.Data.DataColumn columnImagePath;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DTDetailsDataTable() {
-                this.TableName = "DTDetails";
+            public ImgeDTDataTable() {
+                this.TableName = "ImgeDT";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -302,7 +294,7 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal DTDetailsDataTable(global::System.Data.DataTable table) {
+            internal ImgeDTDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -319,17 +311,9 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected DTDetailsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ImgeDTDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn NameColumn {
-                get {
-                    return this.columnName;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -337,30 +321,6 @@ namespace WindowsFormsApp1 {
             public global::System.Data.DataColumn EmployeeNameColumn {
                 get {
                     return this.columnEmployeeName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn SalaryColumn {
-                get {
-                    return this.columnSalary;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn JoinindDateColumn {
-                get {
-                    return this.columnJoinindDate;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn IsActiveColumn {
-                get {
-                    return this.columnIsActive;
                 }
             }
             
@@ -383,50 +343,46 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DTDetailsRow this[int index] {
+            public ImgeDTRow this[int index] {
                 get {
-                    return ((DTDetailsRow)(this.Rows[index]));
+                    return ((ImgeDTRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event DTDetailsRowChangeEventHandler DTDetailsRowChanging;
+            public event ImgeDTRowChangeEventHandler ImgeDTRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event DTDetailsRowChangeEventHandler DTDetailsRowChanged;
+            public event ImgeDTRowChangeEventHandler ImgeDTRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event DTDetailsRowChangeEventHandler DTDetailsRowDeleting;
+            public event ImgeDTRowChangeEventHandler ImgeDTRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event DTDetailsRowChangeEventHandler DTDetailsRowDeleted;
+            public event ImgeDTRowChangeEventHandler ImgeDTRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddDTDetailsRow(DTDetailsRow row) {
+            public void AddImgeDTRow(ImgeDTRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DTDetailsRow AddDTDetailsRow(string Name, string EmployeeName, string Salary, string JoinindDate, string IsActive, string ImagePath) {
-                DTDetailsRow rowDTDetailsRow = ((DTDetailsRow)(this.NewRow()));
+            public ImgeDTRow AddImgeDTRow(string EmployeeName, string ImagePath) {
+                ImgeDTRow rowImgeDTRow = ((ImgeDTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Name,
                         EmployeeName,
-                        Salary,
-                        JoinindDate,
-                        IsActive,
                         ImagePath};
-                rowDTDetailsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowDTDetailsRow);
-                return rowDTDetailsRow;
+                rowImgeDTRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowImgeDTRow);
+                return rowImgeDTRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                DTDetailsDataTable cln = ((DTDetailsDataTable)(base.Clone()));
+                ImgeDTDataTable cln = ((ImgeDTDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -434,61 +390,49 @@ namespace WindowsFormsApp1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new DTDetailsDataTable();
+                return new ImgeDTDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnName = base.Columns["Name"];
                 this.columnEmployeeName = base.Columns["EmployeeName"];
-                this.columnSalary = base.Columns["Salary"];
-                this.columnJoinindDate = base.Columns["JoinindDate"];
-                this.columnIsActive = base.Columns["IsActive"];
                 this.columnImagePath = base.Columns["ImagePath"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnName);
                 this.columnEmployeeName = new global::System.Data.DataColumn("EmployeeName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmployeeName);
-                this.columnSalary = new global::System.Data.DataColumn("Salary", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSalary);
-                this.columnJoinindDate = new global::System.Data.DataColumn("JoinindDate", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnJoinindDate);
-                this.columnIsActive = new global::System.Data.DataColumn("IsActive", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIsActive);
                 this.columnImagePath = new global::System.Data.DataColumn("ImagePath", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnImagePath);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DTDetailsRow NewDTDetailsRow() {
-                return ((DTDetailsRow)(this.NewRow()));
+            public ImgeDTRow NewImgeDTRow() {
+                return ((ImgeDTRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new DTDetailsRow(builder);
+                return new ImgeDTRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(DTDetailsRow);
+                return typeof(ImgeDTRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.DTDetailsRowChanged != null)) {
-                    this.DTDetailsRowChanged(this, new DTDetailsRowChangeEvent(((DTDetailsRow)(e.Row)), e.Action));
+                if ((this.ImgeDTRowChanged != null)) {
+                    this.ImgeDTRowChanged(this, new ImgeDTRowChangeEvent(((ImgeDTRow)(e.Row)), e.Action));
                 }
             }
             
@@ -496,8 +440,8 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.DTDetailsRowChanging != null)) {
-                    this.DTDetailsRowChanging(this, new DTDetailsRowChangeEvent(((DTDetailsRow)(e.Row)), e.Action));
+                if ((this.ImgeDTRowChanging != null)) {
+                    this.ImgeDTRowChanging(this, new ImgeDTRowChangeEvent(((ImgeDTRow)(e.Row)), e.Action));
                 }
             }
             
@@ -505,8 +449,8 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.DTDetailsRowDeleted != null)) {
-                    this.DTDetailsRowDeleted(this, new DTDetailsRowChangeEvent(((DTDetailsRow)(e.Row)), e.Action));
+                if ((this.ImgeDTRowDeleted != null)) {
+                    this.ImgeDTRowDeleted(this, new ImgeDTRowChangeEvent(((ImgeDTRow)(e.Row)), e.Action));
                 }
             }
             
@@ -514,14 +458,14 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.DTDetailsRowDeleting != null)) {
-                    this.DTDetailsRowDeleting(this, new DTDetailsRowChangeEvent(((DTDetailsRow)(e.Row)), e.Action));
+                if ((this.ImgeDTRowDeleting != null)) {
+                    this.ImgeDTRowDeleting(this, new ImgeDTRowChangeEvent(((ImgeDTRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveDTDetailsRow(DTDetailsRow row) {
+            public void RemoveImgeDTRow(ImgeDTRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -530,7 +474,7 @@ namespace WindowsFormsApp1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                EmpDetails ds = new EmpDetails();
+                EmpImage ds = new EmpImage();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -548,7 +492,7 @@ namespace WindowsFormsApp1 {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "DTDetailsDataTable";
+                attribute2.FixedValue = "ImgeDTDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -592,31 +536,15 @@ namespace WindowsFormsApp1 {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class DTDetailsRow : global::System.Data.DataRow {
+        public partial class ImgeDTRow : global::System.Data.DataRow {
             
-            private DTDetailsDataTable tableDTDetails;
+            private ImgeDTDataTable tableImgeDT;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal DTDetailsRow(global::System.Data.DataRowBuilder rb) : 
+            internal ImgeDTRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableDTDetails = ((DTDetailsDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Name {
-                get {
-                    try {
-                        return ((string)(this[this.tableDTDetails.NameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Name\' in table \'DTDetails\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDTDetails.NameColumn] = value;
-                }
+                this.tableImgeDT = ((ImgeDTDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -624,62 +552,14 @@ namespace WindowsFormsApp1 {
             public string EmployeeName {
                 get {
                     try {
-                        return ((string)(this[this.tableDTDetails.EmployeeNameColumn]));
+                        return ((string)(this[this.tableImgeDT.EmployeeNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'EmployeeName\' in table \'DTDetails\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'EmployeeName\' in table \'ImgeDT\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDTDetails.EmployeeNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Salary {
-                get {
-                    try {
-                        return ((string)(this[this.tableDTDetails.SalaryColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Salary\' in table \'DTDetails\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDTDetails.SalaryColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string JoinindDate {
-                get {
-                    try {
-                        return ((string)(this[this.tableDTDetails.JoinindDateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'JoinindDate\' in table \'DTDetails\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDTDetails.JoinindDateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string IsActive {
-                get {
-                    try {
-                        return ((string)(this[this.tableDTDetails.IsActiveColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'IsActive\' in table \'DTDetails\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDTDetails.IsActiveColumn] = value;
+                    this[this.tableImgeDT.EmployeeNameColumn] = value;
                 }
             }
             
@@ -688,87 +568,39 @@ namespace WindowsFormsApp1 {
             public string ImagePath {
                 get {
                     try {
-                        return ((string)(this[this.tableDTDetails.ImagePathColumn]));
+                        return ((string)(this[this.tableImgeDT.ImagePathColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ImagePath\' in table \'DTDetails\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ImagePath\' in table \'ImgeDT\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDTDetails.ImagePathColumn] = value;
+                    this[this.tableImgeDT.ImagePathColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsNameNull() {
-                return this.IsNull(this.tableDTDetails.NameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetNameNull() {
-                this[this.tableDTDetails.NameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsEmployeeNameNull() {
-                return this.IsNull(this.tableDTDetails.EmployeeNameColumn);
+                return this.IsNull(this.tableImgeDT.EmployeeNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetEmployeeNameNull() {
-                this[this.tableDTDetails.EmployeeNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsSalaryNull() {
-                return this.IsNull(this.tableDTDetails.SalaryColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetSalaryNull() {
-                this[this.tableDTDetails.SalaryColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsJoinindDateNull() {
-                return this.IsNull(this.tableDTDetails.JoinindDateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetJoinindDateNull() {
-                this[this.tableDTDetails.JoinindDateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsIsActiveNull() {
-                return this.IsNull(this.tableDTDetails.IsActiveColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetIsActiveNull() {
-                this[this.tableDTDetails.IsActiveColumn] = global::System.Convert.DBNull;
+                this[this.tableImgeDT.EmployeeNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsImagePathNull() {
-                return this.IsNull(this.tableDTDetails.ImagePathColumn);
+                return this.IsNull(this.tableImgeDT.ImagePathColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetImagePathNull() {
-                this[this.tableDTDetails.ImagePathColumn] = global::System.Convert.DBNull;
+                this[this.tableImgeDT.ImagePathColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -776,22 +608,22 @@ namespace WindowsFormsApp1 {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class DTDetailsRowChangeEvent : global::System.EventArgs {
+        public class ImgeDTRowChangeEvent : global::System.EventArgs {
             
-            private DTDetailsRow eventRow;
+            private ImgeDTRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DTDetailsRowChangeEvent(DTDetailsRow row, global::System.Data.DataRowAction action) {
+            public ImgeDTRowChangeEvent(ImgeDTRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DTDetailsRow Row {
+            public ImgeDTRow Row {
                 get {
                     return this.eventRow;
                 }

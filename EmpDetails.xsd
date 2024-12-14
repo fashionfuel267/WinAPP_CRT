@@ -9,17 +9,18 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="EmpDetails" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="EmpDetails" msprop:Generator_DataSetName="EmpDetails">
+  <xs:element name="EmpDetails" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="EmpDetails" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="EmpDetails">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="DTDetails" msprop:Generator_RowEvHandlerName="DTDetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="DTDetailsRowDeleted" msprop:Generator_RowDeletingName="DTDetailsRowDeleting" msprop:Generator_RowEvArgName="DTDetailsRowChangeEvent" msprop:Generator_TablePropName="DTDetails" msprop:Generator_RowChangedName="DTDetailsRowChanged" msprop:Generator_RowChangingName="DTDetailsRowChanging" msprop:Generator_TableClassName="DTDetailsDataTable" msprop:Generator_RowClassName="DTDetailsRow" msprop:Generator_TableVarName="tableDTDetails" msprop:Generator_UserTableName="DTDetails">
+        <xs:element name="DTDetails" msprop:Generator_RowClassName="DTDetailsRow" msprop:Generator_RowEvHandlerName="DTDetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="DTDetailsRowDeleted" msprop:Generator_RowDeletingName="DTDetailsRowDeleting" msprop:Generator_RowEvArgName="DTDetailsRowChangeEvent" msprop:Generator_TablePropName="DTDetails" msprop:Generator_RowChangedName="DTDetailsRowChanged" msprop:Generator_UserTableName="DTDetails" msprop:Generator_RowChangingName="DTDetailsRowChanging" msprop:Generator_TableClassName="DTDetailsDataTable" msprop:Generator_TableVarName="tableDTDetails">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Name" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_UserColumnName="Name" type="xs:string" minOccurs="0" />
-              <xs:element name="EmployeeName" msprop:Generator_ColumnPropNameInRow="EmployeeName" msprop:Generator_ColumnPropNameInTable="EmployeeNameColumn" msprop:Generator_ColumnVarNameInTable="columnEmployeeName" msprop:Generator_UserColumnName="EmployeeName" type="xs:string" minOccurs="0" />
-              <xs:element name="Salary" msprop:Generator_ColumnPropNameInRow="Salary" msprop:Generator_ColumnPropNameInTable="SalaryColumn" msprop:Generator_ColumnVarNameInTable="columnSalary" msprop:Generator_UserColumnName="Salary" type="xs:string" minOccurs="0" />
-              <xs:element name="JoinindDate" msprop:Generator_ColumnPropNameInRow="JoinindDate" msprop:Generator_ColumnPropNameInTable="JoinindDateColumn" msprop:Generator_ColumnVarNameInTable="columnJoinindDate" msprop:Generator_UserColumnName="JoinindDate" type="xs:string" minOccurs="0" />
-              <xs:element name="IsActive" msprop:Generator_ColumnPropNameInRow="IsActive" msprop:Generator_ColumnPropNameInTable="IsActiveColumn" msprop:Generator_ColumnVarNameInTable="columnIsActive" msprop:Generator_UserColumnName="IsActive" type="xs:string" minOccurs="0" />
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnVarNameInTable="columnName" type="xs:string" minOccurs="0" />
+              <xs:element name="EmployeeName" msprop:Generator_UserColumnName="EmployeeName" msprop:Generator_ColumnPropNameInTable="EmployeeNameColumn" msprop:Generator_ColumnPropNameInRow="EmployeeName" msprop:Generator_ColumnVarNameInTable="columnEmployeeName" type="xs:string" minOccurs="0" />
+              <xs:element name="Salary" msprop:Generator_UserColumnName="Salary" msprop:Generator_ColumnPropNameInTable="SalaryColumn" msprop:Generator_ColumnPropNameInRow="Salary" msprop:Generator_ColumnVarNameInTable="columnSalary" type="xs:string" minOccurs="0" />
+              <xs:element name="JoinindDate" msprop:Generator_UserColumnName="JoinindDate" msprop:Generator_ColumnPropNameInTable="JoinindDateColumn" msprop:Generator_ColumnPropNameInRow="JoinindDate" msprop:Generator_ColumnVarNameInTable="columnJoinindDate" type="xs:string" minOccurs="0" />
+              <xs:element name="IsActive" msprop:Generator_UserColumnName="IsActive" msprop:Generator_ColumnPropNameInTable="IsActiveColumn" msprop:Generator_ColumnPropNameInRow="IsActive" msprop:Generator_ColumnVarNameInTable="columnIsActive" type="xs:string" minOccurs="0" />
+              <xs:element name="ImagePath" msprop:Generator_ColumnPropNameInRow="ImagePath" msprop:Generator_ColumnPropNameInTable="ImagePathColumn" msprop:Generator_ColumnVarNameInTable="columnImagePath" msprop:Generator_UserColumnName="ImagePath" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
