@@ -36,11 +36,12 @@
             this.departmentSummeryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.detailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.empImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.subReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.empImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.subReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.employeeExpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +53,8 @@
             this.employeeToolStripMenuItem,
             this.reportToolStripMenuItem,
             this.empImageToolStripMenuItem,
-            this.subReportToolStripMenuItem});
+            this.subReportToolStripMenuItem,
+            this.employeeExpToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(632, 24);
@@ -103,6 +105,20 @@
             this.imageToolStripMenuItem.Text = "Image";
             this.imageToolStripMenuItem.Click += new System.EventHandler(this.imageToolStripMenuItem_Click);
             // 
+            // empImageToolStripMenuItem
+            // 
+            this.empImageToolStripMenuItem.Name = "empImageToolStripMenuItem";
+            this.empImageToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.empImageToolStripMenuItem.Text = "EmpImage";
+            this.empImageToolStripMenuItem.Click += new System.EventHandler(this.empImageToolStripMenuItem_Click);
+            // 
+            // subReportToolStripMenuItem
+            // 
+            this.subReportToolStripMenuItem.Name = "subReportToolStripMenuItem";
+            this.subReportToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
+            this.subReportToolStripMenuItem.Text = "SubReport";
+            this.subReportToolStripMenuItem.Click += new System.EventHandler(this.subReportToolStripMenuItem_Click);
+            // 
             // statusStrip
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -119,19 +135,12 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
             this.toolStripStatusLabel.Text = "Status";
             // 
-            // empImageToolStripMenuItem
+            // employeeExpToolStripMenuItem
             // 
-            this.empImageToolStripMenuItem.Name = "empImageToolStripMenuItem";
-            this.empImageToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
-            this.empImageToolStripMenuItem.Text = "EmpImage";
-            this.empImageToolStripMenuItem.Click += new System.EventHandler(this.empImageToolStripMenuItem_Click);
-            // 
-            // subReportToolStripMenuItem
-            // 
-            this.subReportToolStripMenuItem.Name = "subReportToolStripMenuItem";
-            this.subReportToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
-            this.subReportToolStripMenuItem.Text = "SubReport";
-            this.subReportToolStripMenuItem.Click += new System.EventHandler(this.subReportToolStripMenuItem_Click);
+            this.employeeExpToolStripMenuItem.Name = "employeeExpToolStripMenuItem";
+            this.employeeExpToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
+            this.employeeExpToolStripMenuItem.Text = "EmployeeExp";
+            this.employeeExpToolStripMenuItem.Click += new System.EventHandler(this.employeeExpToolStripMenuItem_Click);
             // 
             // MDIParent1
             // 
@@ -169,6 +178,7 @@
         private System.Windows.Forms.ToolStripMenuItem imageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem empImageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem subReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem employeeExpToolStripMenuItem;
     }
 }
 

@@ -75,6 +75,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DbHRDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DbHRDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbHRDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DeptSummeryRpt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +116,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EmpImage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeExp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeExp.Designer.cs">
+      <DependentUpon>EmployeeExp.cs</DependentUpon>
     </Compile>
     <Compile Include="EmployeeFRM.cs">
       <SubType>Form</SubType>
@@ -187,6 +198,9 @@
     <EmbeddedResource Include="EmpDetailsrpt.resx">
       <DependentUpon>EmpDetailsrpt.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeExp.resx">
+      <DependentUpon>EmployeeExp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmployeeFRM.resx">
       <DependentUpon>EmployeeFRM.cs</DependentUpon>
     </EmbeddedResource>
@@ -241,6 +255,17 @@
     </None>
     <None Include="DbHRDataSet.xss">
       <DependentUpon>DbHRDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DbHRDataSet1.xsc">
+      <DependentUpon>DbHRDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DbHRDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbHRDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbHRDataSet1.xss">
+      <DependentUpon>DbHRDataSet1.xsd</DependentUpon>
     </None>
     <None Include="DeptWithEmp.xsc">
       <DependentUpon>DeptWithEmp.xsd</DependentUpon>

@@ -52,6 +52,7 @@ namespace WindowsFormsApp1.DAL
                 if (result > 0)
                 {
                     System.IO.File.Copy(openFileDialog.FileName, path);
+
                     // SetGridView();
 
                     //loadEmployee();
@@ -163,7 +164,10 @@ namespace WindowsFormsApp1.DAL
                 if (!string.IsNullOrEmpty(row["Imagepath"].ToString()))
                 {
                     imgPath = path + row["Imagepath"].ToString();
-                    row["Data"] = File.ReadAllBytes(imgPath);
+                    if (File.Exists(imgPath)) {
+                        row["Data"] = File.ReadAllBytes(imgPath);
+                    }
+                    
                 }
             }
             return dt;
@@ -199,5 +203,8 @@ namespace WindowsFormsApp1.DAL
             return emp;
           
         }
+
+       
+
     }
 }

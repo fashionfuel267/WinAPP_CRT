@@ -148,5 +148,14 @@ namespace WindowsFormsApp1
             empImage.MdiParent = this;
 
         }
+
+        private void employeeExpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EmployeeExp empImage = new EmployeeExp();
+            empImage.Show();
+            empImage.MdiParent = this;
+
+
+        }
     }
 }
